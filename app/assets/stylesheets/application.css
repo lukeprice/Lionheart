@@ -11,3 +11,163 @@
  *= require_self
  *= require_tree .
 */
+
+body
+{
+}
+div.header
+{
+    width:960px;
+    height:155px;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-right:auto;
+    margin-left:auto;
+}
+div.content
+{
+    width:960px;
+    height:625px;
+    margin-right:auto;
+    margin-left:auto;
+}
+div.content-boxes
+{
+    width:980px;
+    height:180px;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-right:auto;
+    margin-left:auto;
+}
+div.content-box
+{
+    width:300px;
+    height:180px;
+    background-color: #9d9c9a;
+    margin-right: 20px;
+    float: left;
+}
+div.footer-box
+{
+    width:100%;
+    height:200px;
+    margin-top:20px;
+    margin-bottom:20px;
+    background-color: #393939;
+}
+div.footer
+{
+    height:180px;
+    width: 960px;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-right:auto;
+    margin-left:auto;
+}
+div.footer-contact
+{
+    width:300px;
+    height:180px;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top: 10px;
+    float: left;
+}
+p.footer
+{
+    color: #737373;
+    font-size: small;
+    padding-left: 20px;
+}
+div.footer-map
+{
+    width:360px;
+    height:180px;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top: 10px;
+    padding-left: 20px;
+    float: left;
+}
+div.footer-logo
+{
+    width:220px;
+    height:180px;
+    margin-right:10px;
+    margin-left:10px;
+    float: left;
+}
+div.header-logo
+{
+    width:380px;
+    height:155px;
+    margin-right:10px;
+    margin-left:10px;
+    float: left;
+}
+div.header-nav
+{
+    width:540px;
+    height:155px;
+    margin-right:10px;
+    margin-left:10px;
+    float: right;
+}
+p.nav
+{
+    text-align:center;
+    margin-top:65px;
+}
+ul.nav
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+li.nav
+{
+float:left;
+}
+a.nav
+{
+display:block;
+width:120px;
+}
+a.nav:link,a.nav:visited
+{
+display:block;
+width:120px;
+font-weight:bold;
+text-align:center;
+padding:4px;
+text-decoration:none;
+text-transform:uppercase;
+color:#000000;
+}
+a.nav:hover,a.nav:active
+{
+    background-color:#f1f1fa;
+}
+hr.header
+{
+border: 0;
+color: #9E9E9E;
+background-color: #9E9E9E;
+height: 1px;
+width: 100%;
+text-align: left;
+}
+p.map
+{
+    font-size: small;
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+a.map:link {color:#737373;}
+a.map:visited {color:#737373;}
+a.map:hover {color:#737373;}
+a.map:active {color:#737373;}

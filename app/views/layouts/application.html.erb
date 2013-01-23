@@ -7,8 +7,50 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="header">
+  <div class="header-logo">
+  <%= image_tag("logo.jpg", :size => "150x150") %>
+  </div>
+  <div class="header-nav">
+    <p class="nav">
+      <ul class="nav">
+        <li class="nav"><a href ="#" class="nav">Home</a></li>
+        <li class="nav"><a href ="#" class="nav">Tour</a></li>
+        <li class="nav"><a href ="#" class="nav">Contact Us</a></li>
+        <li class="nav"><a href ="#" class="nav">About Us</a></li>
+      </ul>
+    </p>
+  </div>
+  <hr class="header" />
+</div>
+  <div class="content">
+    <%= yield %>
+  </div>
+  <div class="footer-box">
+    <div class="footer">
+      <div class="footer-contact">
+        <p class="footer">
+        Lionheart Technical Service<br />
+        123 Address Way<br />
+        Somewhere, ON L1E 5R4<br />
+        Canada<br />
+        1(999)999-9999<br />
+        1(800)999-9999<br />
+        <br />
+        Email Us Now
+        </p>
+      </div>
+      <div class="footer-map">
+        <p class="map"><a href ="#" class="map">Home</a></p>
+        <p class="map"><a href ="#" class="map">Tour</a></p>
+        <p class="map"><a href ="#" class="map">Contact Us</a></p>
+        <p class="map"><a href ="#" class="map">About Us</a></p>
+        <p class="map"><a href ="#" class="map">Facebook</a></p>
+      </div>
+      <div class="footer-logo">
+        <%= image_tag("logo.jpg", :size => "180x180", :align => "center") %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
