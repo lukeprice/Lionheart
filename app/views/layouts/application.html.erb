@@ -9,14 +9,14 @@
 <body>
 <div class="header">
   <div class="header-logo">
-  <%= image_tag("logo.jpg", :size => "150x150") %>
+  <%=  link_to image_tag("logo.jpg", :size => "150x150"), root_path %>
   </div>
   <div class="header-nav">
     <p class="nav">
       <ul class="nav">
-        <li class="nav"><a href ="#" class="nav">Home</a></li>
+        <li class="nav"><%=  link_to "Home", root_path, :class => "nav" %></li>
         <li class="nav"><a href ="#" class="nav">Tour</a></li>
-        <li class="nav"><a href ="#" class="nav">Contact Us</a></li>
+        <li class="nav"><%=  link_to "Contact Us", contact_path, :class => "nav" %></li>
         <li class="nav"><a href ="#" class="nav">About Us</a></li>
       </ul>
     </p>
