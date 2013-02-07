@@ -1,26 +1,47 @@
-<%= form_for @message, :url => contact_path do |form| %>
-  <fieldset class="fields">
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
+<div class="main-content">
+  <%= image_tag("news-shadow.png", :class => "page-title" ) %>
+  <p class="page-title">Contact Us</p>
+  <div class="content-left">
+    <p>
+      Lionheart Technical Service<br />
+      123 Address Way<br />
+      Somewhere, ON L1E 5R4<br />
+      Canada<br />
+      1(999)999-9999<br />
+      1(800)999-9999<br />
+      <br />
+      <%=  link_to "Contact Us", contact_path, :class => "content-left" %>
+    </p>
+  </div>
+  <div class="content-right">
+    <h2>Contact Form:</h2>
+    <p>Someone from our office will contact you within 24hrs.</p>
+    <hr class="contact" />
+    <%= form_for @message, :url => contact_path do |form| %>
+      <fieldset class="fields">
+        <div class="field">
+          <%= form.label :name, "Name:" %><br />
+          <%= form.text_field :name %>
+        </div>
 
-    <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
-    </div>
-    <div class="field">
-      <%= form.label :phone_number %>
-      <%= form.text_field :phone_number %>
-    </div>
+        <div class="field">
+          <%= form.label :email, "Email:" %><br />
+          <%= form.text_field :email %>
+        </div>
+        <div class="field">
+          <%= form.label :phone_number, "Phone Number" %><br />
+          <%= form.text_field :phone_number %>
+        </div>
 
-    <div class="field">
-      <%= form.label :body %>
-      <%= form.text_area :body %>
-    </div>
-  </fieldset>
+        <div class="field">
+          <%= form.label :body, "How can we help you?" %><br />
+          <%= form.text_area :body, :size => "50x10", :resize => "none" %>
+        </div>
+      </fieldset>
 
-  <fieldset class="actions">
-    <%= form.submit "Send" %>
-  </fieldset>
-<% end %>
+      <fieldset class="actions">
+        <%= form.submit "Submit", :class => "submit" %>
+      </fieldset>
+    <% end %>
+    </div>
+</div>

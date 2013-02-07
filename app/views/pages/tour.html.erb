@@ -1,0 +1,17 @@
+
+<div class="main-content">
+  <%= image_tag("news-shadow.png", :class => "page-title" ) %>
+  <p class="page-title">Tour</p>
+  <div class="content-left">
+
+  </div>
+  <div class="content-right">
+
+    <%= image_tag("tour/Home Screen.png", :class => "tour-main" ) %><br /><br />
+
+    <% @images.each do |image| %>
+      <%= image_tag ("tour/#{image.split('/').last}"), :class => 'tour-nav-images' %>
+    <% end %>
+
+    </div>
+</div>

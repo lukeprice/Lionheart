@@ -14,6 +14,11 @@
 
 body
 {
+    background-image:url('bg.jpg');
+    background-size: 100% 105%;
+    font: 15px constantia,serif;
+    text-transform:capitalize;
+    font-variant:small-caps;
 }
 div.header
 {
@@ -23,7 +28,9 @@ div.header
     margin-bottom:20px;
     margin-right:auto;
     margin-left:auto;
+    
 }
+
 div.content
 {
     width:960px;
@@ -39,6 +46,7 @@ div.content-boxes
     margin-bottom:20px;
     margin-right:auto;
     margin-left:auto;
+    position: relative;
 }
 div.content-box
 {
@@ -50,11 +58,14 @@ div.content-box
 }
 div.footer-box
 {
-    width:100%;
-    height:200px;
+    
+    width: 100%;
+    height:180px;
     margin-top:20px;
     margin-bottom:20px;
     background-color: #393939;
+    overflow: visible;
+    z-index: -1;
 }
 div.footer
 {
@@ -68,7 +79,7 @@ div.footer
 div.footer-contact
 {
     width:300px;
-    height:180px;
+    height:160px;
     margin-right:10px;
     margin-left:10px;
     margin-top: 10px;
@@ -83,7 +94,7 @@ p.footer
 div.footer-map
 {
     width:360px;
-    height:180px;
+    height:160px;
     margin-right:10px;
     margin-left:10px;
     margin-top: 10px;
@@ -95,6 +106,7 @@ div.footer-logo
     width:220px;
     height:180px;
     margin-right:10px;
+    margin-top: 10px;
     margin-left:10px;
     float: left;
 }
@@ -105,6 +117,7 @@ div.header-logo
     margin-right:10px;
     margin-left:10px;
     float: left;
+    border: 0;
 }
 div.header-nav
 {
@@ -117,7 +130,6 @@ div.header-nav
 p.nav
 {
     text-align:center;
-    margin-top:65px;
 }
 ul.nav
 {
@@ -133,12 +145,13 @@ float:left;
 a.nav
 {
 display:block;
-width:120px;
+width:100px;
+    margin-top:65px;
 }
 a.nav:link,a.nav:visited
 {
 display:block;
-width:120px;
+width:100px;
 font-weight:bold;
 text-align:center;
 padding:4px;
@@ -163,11 +176,197 @@ p.map
 {
     font-size: small;
     text-align: left;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    line-height:200%;
+    padding-left: 0px;
 }
 
-a.map:link {color:#737373;}
-a.map:visited {color:#737373;}
-a.map:hover {color:#737373;}
-a.map:active {color:#737373;}
+a.map:link {text-decoration:none; color:#757575;}
+a.map:visited {text-decoration:none; color:#757575;}
+a.map:hover {text-decoration:none; color:#757575;}
+a.map:active {text-decoration:none; color:#757575;}
+
+a.footer:link {color:#757575;}
+a.footer:visited {color:#757575;}
+a.footer:hover {color:#757575;}
+a.footer:active {color:#757575;}
+
+a.content-left:link {color:white;}
+a.content-left:visited {color:white;}
+a.content-left:hover {color:white;}
+a.content-left:active {color:white;}
+
+.nav-divider
+{
+    position: relative;
+    top: -65px;
+}
+
+.header-shadow
+{
+    width: 100%;
+}
+
+.map-image
+{
+    position: relative;
+    top: -5px;
+    left: -20px;
+    float: left;
+    padding-right: 0px;
+}
+
+.news-shadow
+{
+    position: absolute;
+    left: -17px;
+    top: 5px;
+}
+
+.facebook-large
+{
+    position: absolute;
+    right:275px;
+    bottom: 20px;
+    z-index: 5;
+}
+
+.latest-posts-shadow
+{
+    position: absolute;
+    right:23px;
+    bottom: 0px;
+}
+
+p.news-shadow
+{
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    text-transform:uppercase;
+    color:#ffffff;
+    font-size: larger;
+}
+
+p.latest-posts-shadow
+{
+    position: absolute;
+    right:48px;
+    bottom: 0px;
+    text-transform:uppercase;
+    text-decoration: none;
+    color:#ffffff;
+    font-size: larger;
+}
+
+div.main-content
+{
+    width:960px;
+    height:625px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color: #9b9b9b;
+    position: relative;
+    color: white;
+}
+
+div.content-left
+{
+    width:220px;
+    height:535px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    margin-top: 80px;
+    font-size: large;
+}
+
+div.content-right
+{
+    width:700px;
+    height:535px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    margin-top: 80px;
+    text-indent:20px;
+}
+
+.page-title
+{
+    position: absolute;
+    left: -17px;
+    top: 5px;
+}
+
+p.page-title
+{
+    position: absolute;
+    left: 25px;
+    top: -10px;
+    text-transform:uppercase;
+    color:#ffffff;
+    font-size: x-large;
+}
+
+.fields
+{
+    border: 0;
+}
+
+input
+{
+    height: 30px;
+    background-color: #b8b8b8;
+    border: 0;
+}
+textarea
+{
+    background-color: #b8b8b8;
+    border: 0;
+    resize: none;
+}
+.actions
+{
+    border: 0;
+}
+
+input.submit
+{
+    width: 200px;
+    height: 30px;
+    background-color: #852324;
+    font: 15px constantia,serif;
+    text-transform:uppercase;
+    color: white;
+    float: left;
+}
+
+hr.contact
+{
+    color: #b8b8b8;
+    background-color: #b8b8b8;
+    height: 5px;
+    border: 0;
+    margin-left: 15px;
+}
+
+.tour-main
+{
+    width: 600px;
+    float: none;
+}
+
+.tour-nav-images
+{
+    width: 75px;
+    float: left;
+    margin-right: 15px;
+    margin-left: 35px;
+}

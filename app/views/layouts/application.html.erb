@@ -9,20 +9,23 @@
 <body>
 <div class="header">
   <div class="header-logo">
-  <%=  link_to image_tag("logo.jpg", :size => "150x150"), root_path %>
+  <%=  link_to image_tag("logo.png", :size => "150x150", :border => "0"), root_path %>
   </div>
   <div class="header-nav">
     <p class="nav">
       <ul class="nav">
         <li class="nav"><%=  link_to "Home", root_path, :class => "nav" %></li>
-        <li class="nav"><a href ="#" class="nav">Tour</a></li>
-        <li class="nav"><%=  link_to "Contact Us", contact_path, :class => "nav" %></li>
-        <li class="nav"><a href ="#" class="nav">About Us</a></li>
+        <li class="nav"><%=  link_to "Tour", tour_path, :class => "nav" %>
+        <%= image_tag("menu-bar.png", :class => "nav-divider") %></li>
+        <li class="nav"><%=  link_to "Contact Us", contact_path, :class => "nav" %>
+        <%= image_tag("menu-bar.png", :class => "nav-divider") %></li>
+        <li class="nav"><%=  link_to "About Us", about_path, :class => "nav" %>
+        <%= image_tag("menu-bar.png", :class => "nav-divider") %></li>
       </ul>
     </p>
   </div>
-  <hr class="header" />
 </div>
+  <%= image_tag("header-shadow.png", :class => "header-shadow") %>
   <div class="content">
     <%= yield %>
   </div>
@@ -37,18 +40,18 @@
         1(999)999-9999<br />
         1(800)999-9999<br />
         <br />
-        Email Us Now
+        <%=  link_to "Contact Us", contact_path, :class => "footer" %>
         </p>
       </div>
       <div class="footer-map">
-        <p class="map"><a href ="#" class="map">Home</a></p>
-        <p class="map"><a href ="#" class="map">Tour</a></p>
-        <p class="map"><a href ="#" class="map">Contact Us</a></p>
-        <p class="map"><a href ="#" class="map">About Us</a></p>
-        <p class="map"><a href ="#" class="map">Facebook</a></p>
+        <p class="map"><a href ="#" class="map">Home</a><br />
+        <%=  link_to "Tour", tour_path, :class => "map" %><br />
+        <%=  link_to "Contact Us", contact_path, :class => "map" %><br />
+        <%=  link_to "About Us", about_path, :class => "map" %><br />
+        <%= image_tag("facebook-small.png", :class => 'map-image') %><a href ="#" class="map">Facebook</a></p>
       </div>
       <div class="footer-logo">
-        <%= image_tag("logo.jpg", :size => "180x180", :align => "center") %>
+        <%= image_tag("footer-lion.png", :align => "center") %>
       </div>
     </div>
   </div>
