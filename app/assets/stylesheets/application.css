@@ -283,6 +283,7 @@ div.content-left
     float: left;
     margin-top: 80px;
     font-size: large;
+    position: relative;
 }
 
 div.content-right
@@ -369,4 +370,11 @@ hr.contact
     float: left;
     margin-right: 15px;
     margin-left: 35px;
+}
+
+.content-bar
+{
+    position: absolute;
+    right: 0px;
+    top: -40px;
 }
