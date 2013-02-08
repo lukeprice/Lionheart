@@ -1,4 +1,6 @@
 Lionheart::Application.routes.draw do
+  resources :news
+
   get "lampstand/content"
 
   get "lampstand/images"
