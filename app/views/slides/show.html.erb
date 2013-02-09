@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @slide.name %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @slide.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_slide_path(@slide) %> |
+<%= link_to 'Back', slides_path %>

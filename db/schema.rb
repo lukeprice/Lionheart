@@ -11,25 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130209030406) do
-
-  create_table "contents", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "images", :force => true do |t|
-    t.string   "title"
-    t.integer  "order"
-    t.string   "filepath"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "news", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130209034919) do
 
   create_table "slides", :force => true do |t|
     t.string   "name"

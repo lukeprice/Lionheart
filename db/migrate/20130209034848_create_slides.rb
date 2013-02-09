@@ -3,6 +3,7 @@ class CreateSlides < ActiveRecord::Migration
     create_table :slides do |t|
       t.string :name
       t.integer :order
+
       t.timestamps
     end
   end
