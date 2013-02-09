@@ -12,3 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+$(document).ready(function () {
+  var slides = ($('div.slide').toArray());
+	var currentSlide = 0;
+  ($(slides[0]).stop().fadeIn(1000));
+  
+  $('div.slide').click(function () {
+    $(slides[currentSlide]).stop().fadeOut(1000, function(){});
+      currentSlide ++;
+      if(currentSlide >= slides.length)
+      {
+        currentSlide = 0;
+      }
+      $(slides[currentSlide]).delay(1300).fadeIn(1000);
+    
+  return false;
+});
+  
+});
+

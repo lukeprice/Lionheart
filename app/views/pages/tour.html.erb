@@ -7,11 +7,10 @@
   </div>
   <div class="content-right">
 		<% @slides.each_with_index do |slide, index| %>
-    <%= content_tag :div, :id => "slide-"+index.to_s, :class => "slide" do -%>
-  	Hello world!
+    <%= content_tag :div, :id => "slide-"+index.to_s, :class => "slide", :hidden => "true" do -%>
+    <%= image_tag(slide.image.url, :class => "tour-main" ) %>
 		<% end -%>
     <% end %>
-    <%= image_tag("tour/Home Screen.png", :class => "tour-main" ) %>
 
     <br /><br />
     <% @images.each do |image| %>
