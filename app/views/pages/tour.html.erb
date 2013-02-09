@@ -3,13 +3,18 @@
   <%= image_tag("news-shadow.png", :class => "page-title" ) %>
   <p class="page-title">Tour</p>
   <div class="content-left">
-  <%= image_tag("content-bar.png", :class => "content-bar") %>
+  	<%= image_tag("content-bar.png", :class => "content-bar") %>
+			<% @slides.each_with_index do |slide, index| %>
+    		<%= content_tag :div, :id => "slide-"+index.to_s, :class => "slide-name" do -%>
+    		<%= slide.name %><br /><br />
+			<% end -%>
+    <% end %>
   </div>
   <div class="content-right">
 		<% @slides.each_with_index do |slide, index| %>
-    <%= content_tag :div, :id => "slide-"+index.to_s, :class => "slide", :hidden => "true" do -%>
-    <%= image_tag(slide.image.url, :class => "tour-main" ) %>
-		<% end -%>
+    	<%= content_tag :div, :id => "slide-"+index.to_s, :class => "slide", :hidden => "true" do -%>
+    		<%= image_tag(slide.image.url, :class => "tour-main" ) %>
+			<% end -%>
     <% end %>
 
     <br /><br />
