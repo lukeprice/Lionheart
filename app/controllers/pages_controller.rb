@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def tour
+    @slides = Slide.all
     @images = Dir.glob("app/assets/images/tour/*.png")
   end
 
