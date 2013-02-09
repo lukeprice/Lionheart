@@ -18,9 +18,11 @@
     <% end %>
 
     <br /><br />
+    <div class='tour-nav-images'>
     <% @images.each do |image| %>
-      <%= image_tag ("tour/#{image.split('/').last}"), :class => 'tour-nav-images' %>
+      <%= image_tag ("tour/#{image.split('/').last}"), :class => 'tour-nav-image' %>
     <% end %>
+    </div>
 
     </div>
 </div>

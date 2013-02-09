@@ -366,6 +366,12 @@ hr.contact
 
 .tour-nav-images
 {
+  	position:absolute;
+  	bottom: 30px;
+}
+
+.tour-nav-image
+{
     width: 75px;
     float: left;
     margin-right: 15px;
