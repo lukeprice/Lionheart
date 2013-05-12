@@ -19,8 +19,10 @@
 
     <br /><br />
     <div class='tour-nav-images'>
-    <% @images.each do |image| %>
-      <%= image_tag ("tour/#{image.split('/').last}"), :class => 'tour-nav-image' %>
+      
+
+		<% @slides.each_with_index do |slide, index| %>
+      <%= image_tag (slide.image.url), :id => "slide-"+index.to_s,  :class => 'tour-nav-image', :counter => index.to_s %>
     <% end %>
     </div>
 
