@@ -13,13 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.purr
+//= require best_in_place.purr
 //= require best_in_place
 
 $(document).ready(function () {
-  
-  /* Activating Best In Place */
-  jQuery(".best_in_place").best_in_place();
-  
+
   var slides = ($('div.slide').toArray());
 	var currentSlide = 0;
   var i;

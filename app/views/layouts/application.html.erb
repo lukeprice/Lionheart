@@ -33,13 +33,7 @@
     <div class="footer">
       <div class="footer-contact">
         <p class="footer">
-          <%= best_in_place @home, :contact_info, :type => :textarea %>
-        Lionheart Technical Service<br />
-        123 Address Way<br />
-        Somewhere, ON L1E 5R4<br />
-        Canada<br />
-        1(999)999-9999<br />
-        1(800)999-9999<br />
+          <%= render :partial => "content/address_information" %>
         <br />
         <%=  link_to "Contact Us", contact_path, :class => "footer" %>
         </p>
