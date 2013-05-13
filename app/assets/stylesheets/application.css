@@ -38,6 +38,12 @@ div.content
     margin-right:auto;
     margin-left:auto;
 }
+div.banner-box
+{
+  width:920px;
+  height:385px;
+  position: relative;
+}
 div.content-boxes
 {
     width:980px;

@@ -1,4 +1,11 @@
-<%= image_tag("home.jpg")  %>
+
+<div class="banner-box">		
+  <% @banners.each_with_index do |banner, index| %>
+  <%= content_tag :div, :id => "banner-"+index.to_s, :class => "banner", :hidden => "true" do -%>
+      <%= image_tag(banner.image.url, :class => "banner" ) %>
+    <% end -%>
+  <% end %>
+</div>
 
 <div class="content-boxes">
   <%= image_tag("news-shadow.png", :class => "news-shadow" ) %>

@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
 
   def home
+    @banners = Banner.all
+    @images = Dir.glob("app/assets/images/tour/*.png")
     
   end
 
