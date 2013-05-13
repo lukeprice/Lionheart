@@ -1,4 +1,6 @@
 Lionheart::Application.routes.draw do
+  resources :banners
+
   resources :slides
 
   resources :news

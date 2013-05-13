@@ -16,7 +16,12 @@
 $(document).ready(function () {
   var slides = ($('div.slide').toArray());
 	var currentSlide = 0;
+  var i;
+  $('div.slide').hide(function() { 
+     $('#'+ "slide-0" +'.slide').show();
+  });
   ($(slides[0]).stop().fadeIn(1000));
+  
   
   $('div.slide').click(function () {
     $(slides[currentSlide]).stop().fadeOut(1000, function(){});
