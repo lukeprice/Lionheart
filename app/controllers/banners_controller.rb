@@ -1,4 +1,5 @@
 class BannersController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /banners
   # GET /banners.json
   def index

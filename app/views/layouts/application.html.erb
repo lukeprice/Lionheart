@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="admin-nav">
+    <p class="admin-nav">
+      <ul class="admin-nav">
+        <% if admin_signed_in? %>
+          <li class="nav"><%=  link_to "Banners", banners_path, :class => "admin-nav" %>
+          <%= image_tag("menu-bar.png", :class => "nav-divider") %></li>
+          <li class="nav"><%=  link_to "Slides", slides_path, :class => "admin-nav" %>
+          <%= image_tag("menu-bar.png", :class => "nav-divider") %></li>
+          <li class="nav"><%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => "admin-nav" %>
+          <%= image_tag("menu-bar.png", :class => "nav-divider") %></li>
+        <% end %>
+    </ul>
+    </p>
+  </div>
 <div class="header">
   <div class="header-logo">
   <%=  link_to image_tag("logo.png", :size => "150x150", :border => "0"), root_path %>
@@ -24,6 +38,7 @@
       </ul>
     </p>
   </div>
+
 </div>
   <%= image_tag("header-shadow.png", :class => "header-shadow") %>
   <div class="content">

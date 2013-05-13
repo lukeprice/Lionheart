@@ -1,3 +1,4 @@
+<div id="fb-root"></div>
 
 <div class="banner-box">		
   <% @banners.each_with_index do |banner, index| %>
@@ -17,7 +18,7 @@
   <%= image_tag("news-shadow.png", :class => "news-shadow" ) %>
   <p class="news-shadow">News</p>
   <div class="content-box"></div>
-  <div class="content-box"></div>
+  <div class="content-box"><div class="fb-like-box" data-href="http://www.facebook.com/platform" data-width="460" data-height="280" data-show-faces="false" data-stream="true" data-header="false"></div></div>
   <%= image_tag("facebook-large.png", :class => "facebook-large") %>
   <%= image_tag("latest-posts-shadow.png", :class => "latest-posts-shadow") %>
   <p class="latest-posts-shadow">Latest Posts</p>
