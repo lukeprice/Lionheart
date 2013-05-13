@@ -5,12 +5,17 @@
       <%= image_tag(banner.image.url, :class => "banner" ) %>
     <% end -%>
   <% end %>
+  <div class="left-arrow">
+    <%= image_tag("arrow-left-large-shadow.png", :class => "left-arrow" ) %>
+  </div>
+  <div class="right-arrow">
+    <%= image_tag("arrow-right-large.png", :class => "right-arrow" ) %>
+  </div>
 </div>
 
 <div class="content-boxes">
   <%= image_tag("news-shadow.png", :class => "news-shadow" ) %>
   <p class="news-shadow">News</p>
-  <div class="content-box"></div>
   <div class="content-box"></div>
   <div class="content-box"></div>
   <%= image_tag("facebook-large.png", :class => "facebook-large") %>

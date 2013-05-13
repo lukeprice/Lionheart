@@ -12,8 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.purr
+//= require best_in_place
 
 $(document).ready(function () {
+  
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
+  
   var slides = ($('div.slide').toArray());
 	var currentSlide = 0;
   var i;
@@ -42,6 +48,53 @@ $(document).ready(function () {
     return false;
    });
   
+  $('div.banner').click(function () {
+    $(banners[currentBanner]).stop().fadeOut(1000, function(){});
+      currentBanner ++;
+      if(currentBanner >= banners.length)
+      {
+        currentBanner = 0;
+      }
+      $(banners[currentBanner]).delay(0).fadeIn(1000);
+    
+    return false;
+   });
+  
+  $('div.left-arrow').click(function () {
+    $(banners[currentBanner]).stop().fadeOut(1000, function(){});
+      currentBanner --;
+      if(currentBanner < 0)
+      {
+        currentBanner = banners.length - 1;
+      }
+      $(banners[currentBanner]).delay(0).fadeIn(1000);
+    
+    return false;
+   });
+  
+  $('div.right-arrow').click(function () {
+    $(banners[currentBanner]).stop().fadeOut(1000, function(){});
+      currentBanner ++;
+      if(currentBanner >= banners.length)
+      {
+        currentBanner = 0;
+      }
+      $(banners[currentBanner]).delay(0).fadeIn(1000);
+    
+    return false;
+   });
+  
+  setInterval(function () {
+    $(banners[currentBanner]).stop().fadeOut(1000, function(){});
+      currentBanner ++;
+      if(currentBanner >= banners.length)
+      {
+        currentBanner = 0;
+      }
+      $(banners[currentBanner]).delay(0).fadeIn(1000).delay(5000);
+  }, 8000);
+
+  
   $('img.tour-nav-image').click(function(event) {
     $(slides[currentSlide]).stop().fadeOut(1000, function(){});
     slideID = event.target.id.split('-');
@@ -60,5 +113,5 @@ $(document).ready(function () {
     return false;
   });
   
+  
 });
-
