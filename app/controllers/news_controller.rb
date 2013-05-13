@@ -13,6 +13,7 @@ class NewsController < ApplicationController
   # GET /news/1
   # GET /news/1.json
   def show
+    @articles = News.find(:all, :order => "id desc", :limit => 5)
     @news = News.find(params[:id])
 
     respond_to do |format|

@@ -1,15 +1,32 @@
-<p id="notice"><%= notice %></p>
+
+
+<div class="main-content">
+  <%= image_tag("news-shadow.png", :class => "page-title" ) %>
+  <p class="page-title">News</p>
+  <div class="content-left">
+  <% if !@articles.nil? %>
+    <% @articles.each do |news| %>
+    <%= link_to news.title, news_path(news) %>: <%=h truncate(news.content, :length => 40) %> <br /><br />
+    <% end %>
+  <% end %>
+    <%= link_to "All News", news_index_path %>
+  <%= image_tag("content-bar.png", :class => "content-bar") %>
+  </div>
+  <div class="content-right">
+    <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @news.title %>
+  <h2><%= @news.title %></h2>
 </p>
 
 <p>
-  <b>Content:</b>
-  <%= @news.content %>
+  <%= simple_format(@news.content) %>
 </p>
 
-
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_news_path(@news) %> |
 <%= link_to 'Back', news_index_path %>
+<% end %>
+  </div>
+</div>
+
