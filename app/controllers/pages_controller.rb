@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
     @banners = Banner.all
     @images = Dir.glob("app/assets/images/tour/*.png")
+    @news = News.find(:all, :order => "id desc", :limit => 5).reverse
     
   end
 
