@@ -362,6 +362,7 @@ hr.contact
 {
     width: 600px;
     float: none;
+    cursor: pointer;
 }
 
 .tour-nav-images
@@ -376,6 +377,7 @@ hr.contact
     float: left;
     margin-right: 15px;
     margin-left: 35px;
+    cursor: pointer;
 }
 
 .content-bar
@@ -383,4 +385,8 @@ hr.contact
     position: absolute;
     right: 0px;
     top: -40px;
+}
+
+div.slide-name {
+    cursor: pointer;
 }

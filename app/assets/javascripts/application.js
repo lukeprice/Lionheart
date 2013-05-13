@@ -39,5 +39,14 @@ $(document).ready(function () {
     return false;
   });
   
+    $('div.slide-name').click(function(event) {
+    $(slides[currentSlide]).stop().fadeOut(1000, function(){});
+    slideID = event.target.id.split('-');
+    currentSlide = parseInt(slideID[1]);
+    $(slides[currentSlide]).delay(1300).fadeIn(1000);
+    
+    return false;
+  });
+  
 });
 
