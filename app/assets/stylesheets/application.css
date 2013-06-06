@@ -14,7 +14,11 @@
 
 body
 {
+    zoom: 1;
+  -webkit-transform: translateZ(0.00001px);
     background-image:url('bg.jpg');
+    background-color:transparent;
+    background-image:url("bg.jpg");
     background-size: 100% 105%;
     font: 15px constantia,serif;
     text-transform:capitalize;
